@@ -3,7 +3,7 @@ name: Deploy Frontend to Azure
 on:
   push:
     branches:
-      - main  # 当 main 分支有新的提交时，触发部署
+      - main
 
 jobs:
   build-and-deploy:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: 🚀 检出代码
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 📦 安装 Node.js
         uses: actions/setup-node@v3
@@ -24,12 +24,17 @@ jobs:
       - name: 🔨 构建前端
         run: npm run build
 
+      # ✅ 这里删除测试步骤
+      # - name: 🧪 运行测试
+      #   run: npm test
+
       - name: 🚀 部署到 Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "chatbot-frontend-unique12345"  # 你的 Azure Web App 名称
+          app-name: "chatbot-frontend-unique12345"
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ./build  # 指定部署的目录
+          package: ./build
+
 
 
 
