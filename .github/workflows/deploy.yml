@@ -1,0 +1,35 @@
+name: Deploy to Azure App Service
+
+on:
+  push:
+    branches:
+      - main  # 仅当 main 分支有更新时部署
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🚀 Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: 📦 Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: 📥 Install Dependencies
+      run: npm install
+
+    - name: 🚀 Build (可选)
+      run: npm run build
+
+    - name: 🔧 Zip Code for Deployment
+      run: zip -r release.zip . -x "*.git*"
+
+    - name: 🚀 Deploy to Azure
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_CREDENTIALS }}
+        package: release.zip
