@@ -1,4 +1,4 @@
-name: Deploy Backend to Azure
+name: Deploy Frontend to Azure
 
 on:
   push:
@@ -19,15 +19,17 @@ jobs:
         node-version: '18'
 
     - name: Install dependencies
-      run: |
-        cd backend
-        npm install
+      run: npm install
+
+    - name: Build frontend
+      run: npm run build
 
     - name: Deploy to Azure
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'chatbot-backend-unique123'
+        app-name: 'chatbot-frontend-unique123'
         publish-profile: ${{ secrets.AZURE_CLIENT_SECRET }}
-        package: './backend'
+        package: './build'
+
 
 
