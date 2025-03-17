@@ -3,33 +3,34 @@ name: Deploy Frontend to Azure
 on:
   push:
     branches:
-      - main
+      - main  # 当 main 分支有新的提交时，触发部署
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: 🚀 检出代码
+        uses: actions/checkout@v3
 
-    - name: Install Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
+      - name: 📦 安装 Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-    - name: Install dependencies
-      run: npm install
+      - name: 📥 安装依赖
+        run: npm install
 
-    - name: Build frontend
-      run: npm run build
+      - name: 🔨 构建前端
+        run: npm run build
 
-    - name: Deploy to Azure
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'chatbot-frontend-unique123'
-        publish-profile: ${{ secrets.AZURE_CLIENT_SECRET }}
-        package: './build'
+      - name: 🚀 部署到 Azure Web App
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: "chatbot-frontend-unique12345"  # 你的 Azure Web App 名称
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ./build  # 指定部署的目录
+
 
 
 
