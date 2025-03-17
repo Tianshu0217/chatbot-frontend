@@ -19,14 +19,13 @@ jobs:
         node-version: '18'
 
     - name: Install dependencies
-      run: |
-        cd backend
-        npm install
+      run: npm install  # ✅ 直接在根目录运行 npm install
 
     - name: Deploy to Azure
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'chatbot-backend-unique123'
         publish-profile: ${{ secrets.AZURE_CLIENT_SECRET }}
-        package: './backend'
+        package: '.'  # ✅ 直接部署整个根目录
+
 
