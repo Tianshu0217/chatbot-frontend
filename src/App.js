@@ -8,6 +8,7 @@ function App() {
   const [tempNickname, setTempNickname] = useState(""); // 用于输入昵称
   const [message, setMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
+  const [fileUrl, setFileUrl] = useState(null);
 
 
   useEffect(() => {
@@ -120,6 +121,7 @@ return (
         </button>
 
         {/* ✅ 这里显示下载按钮 */}
+        {/* eslint-disable-next-line no-undef */}
         {fileUrl && (
           <div style={{ marginTop: "15px" }}>
             <a
