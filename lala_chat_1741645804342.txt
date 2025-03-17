@@ -1,0 +1,2 @@
+lala: Hello, how are you?
+Bot: Hello! I'm an artificial intelligence, so I don't have feelings. But thank you for asking! How can I assist you today?

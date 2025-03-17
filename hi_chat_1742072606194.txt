@@ -1,0 +1,24 @@
+hi: hi
+Bot: Hello! How can I assist you today?
+hi: hihihihihihihihihihi
+Bot: Hello! How can I help you today?
+hi: do you like dog?
+Bot: As an artificial intelligence, I don't have personal experiences or feelings, but I'm programmed to understand a lot about dogs and can help answer any questions you have about them.
+hi: oh I have a dog, his name is lookie
+Bot: That's great! Dogs make wonderful companions. How can I assist you with Lookie? Do you need advice on training, nutrition, or general care?
+hi: oh yes, what's my dog's name? quick question!
+Bot: Your dog's name is Lookie.
+hi: okay you got it!
+Bot: I'm glad I could help! If you have any other questions or need assistance with something else, feel free to ask.
+hi: oh yes. My dog wants some food to eat, do you have any recommend?
+Bot: Sure! It's important to feed your dog a balanced diet. Some high-quality commercial dog foods are specifically balanced to give dogs the wide range of nutrients they require.
+
+1. **Dry Dog Food:** It has a long shelf-life and is generally cheaper. It also helps to keep your dog's teeth healthy because it's hard and crunchy.
+
+2. **Wet Dog Food:** It contains a lot of water, which can be beneficial for dogs who aren't drinking enough on their own.
+
+3. **Home-Cooked Food:** You can cook for your dog, using foods like chicken, rice, vegetables, and certain kinds of fish. However, you should make sure you're giving your dog a balanced diet. Consultation with a vet is recommended before switching to home-cooked food.
+
+4. **Raw Food Diet:** Some people recommend a diet that simulates what dogs might eat in the wild. This includes raw meat, grains, and vegetables. There are risks involved, including the threat of food-borne illness.
+
+Remember, every dog is different! What works best will depend on Lookie's breed, age, size, and overall health. Treats are fine but should make up no more than 10% of your dog's daily caloric intake. Always provide plenty of fresh water. It's best to consult with your vet before making any significant changes to your dog's diet.

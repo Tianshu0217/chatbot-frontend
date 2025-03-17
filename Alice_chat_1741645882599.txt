@@ -1,0 +1,2 @@
+Alice: Hello, how are you?
+Bot: Assistant: Hello Alice, I'm an artificial intelligence and don't possess feelings, but I'm here and ready to assist you. How can I help you today?

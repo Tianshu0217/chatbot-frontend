@@ -1,0 +1,2 @@
+testUser: Hello, how are you?
+Bot: Hello! I'm an AI, so I don't have feelings, but I'm ready and capable to assist you. How can I help you today?
