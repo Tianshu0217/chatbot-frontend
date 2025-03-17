@@ -8,7 +8,8 @@ function App() {
   const [tempNickname, setTempNickname] = useState(""); // 用于输入昵称
   const [message, setMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
-  const [fileUrl, setFileUrl] = useState(null);
+  const [fileUrl] = useState(null);
+
 
 
   useEffect(() => {
